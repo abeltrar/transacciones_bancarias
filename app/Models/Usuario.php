@@ -12,6 +12,6 @@ class Usuario extends Model
     
     public function cargo()
     {
-        return $this->belongsTo(Cargo::class);
+        return $this->belongsTo(Cargo::class, 'id_cargo');
     }
 }

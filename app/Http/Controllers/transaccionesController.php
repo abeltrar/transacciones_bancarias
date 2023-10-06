@@ -86,6 +86,7 @@ class transaccionesController extends Controller
     {
         // Obtener el ID del usuario autenticado
         $userId = auth()->id();
+        $cargo = auth()->id_cargo();
 
         $idUsuario = $userId;
 

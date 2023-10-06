@@ -211,7 +211,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </ul>
           </li>
 
-
+         
           <li class="nav-item">
             <a href="#" class="nav-link" data-toggle="collapse" data-parent="#menuAccordion" href="#transaccionesSubMenu">
                <i class="fa-solid fa-gears"></i>
@@ -235,6 +235,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </li>
             </ul>
           </li>
+       
+
           
         </ul>
       </nav>
