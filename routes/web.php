@@ -23,14 +23,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/listadoUsuarios', [App\Http\Controllers\UsuariosController::class, 'listadoUsuarios'])->name('listadoUsuarios');
 Route::get('/verUsuario', [App\Http\Controllers\UsuariosController::class, 'verUsuario'])->name('verUsuario');
-Route::get('/CreaCarrera', [App\Http\Controllers\CarrerasController::class, 'crearCarrera'])->name('CreaCarrera');
-Route::get('/listarcarrera', [App\Http\Controllers\CarrerasController::class, 'listarcarrera'])->name('listarcarrera');
-Route::post('/AddCarrera', [App\Http\Controllers\CarrerasController::class, 'AddCarrera'])->name('AddCarrera');
 Route::get('/CrearUsuarioV', [App\Http\Controllers\UsuariosController::class, 'CrearUsuarioV'])->name('CrearUsuarioV');
 Route::post('/store', [App\Http\Controllers\UsuariosController::class, 'store'])->name('store');
-Route::get('/UpdateCarrera', [App\Http\Controllers\CarrerasController::class, 'UpdateCarrera'])->name('UpdateCarrera');
-Route::put('/editCarrera', [App\Http\Controllers\CarrerasController::class, 'editCarrera'])->name('editCarrera');
-Route::delete('/delete', [App\Http\Controllers\CarrerasController::class, 'delete'])->name('delete');
 Route::get('/udpateUsuario', [App\Http\Controllers\UsuariosController::class, 'udpateUsuario'])->name('udpateUsuario');
 Route::put('/editUsuario', [App\Http\Controllers\UsuariosController::class, 'editUsuario'])->name('editUsuario');
 Route::delete('/deleteUser', [App\Http\Controllers\UsuariosController::class, 'deleteUser'])->name('deleteUser');
