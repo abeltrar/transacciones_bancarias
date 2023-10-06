@@ -1,0 +1,235 @@
+.card-header{
+    font-family: 'Varela Round', sans-serif;
+    background: radial-gradient(circle, #0074d9, #00AABB);
+   color: aliceblue;
+}
+
+.transacts{
+    position: relative;
+    display: inline-block;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 95%; 
+    width: 100%;
+}
+.card{
+   
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.transacts{
+    position: relative;
+    display: inline-block;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 95%; 
+    width: 100%;
+    background-color: #343a40;
+}
+
+.btn_cajero{
+    position: absolute;
+    top: 41%;
+    left: 26%;
+    background: radial-gradient(circle, #0074d9, #00AABB);
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agrega un sombreado al botón */
+    z-index: 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s; /* Agrega una transición para la animación */
+   
+}
+.btn_cajero:hover {
+    transform: scale(1.05); /* Hace que el botón se agrande ligeramente al pasar el cursor */
+}
+
+.ver_saldo{
+    top: 53%;
+}
+
+.pagar{
+    top: 48%;
+    left: 46%;
+}
+
+#audio {
+    display: none;
+}
+
+.recargar_cuenta{
+    background: radial-gradient(circle, #0074d9, #00AABB);
+    color: aliceblue;
+}
+
+.close{
+    color: aliceblue;
+}
+
+.btn_enviar{
+    background: radial-gradient(circle, #0074d9, #00AABB);
+    color: aliceblue;
+}
+
+.modal-confirm {		
+	color: #636363;
+	width: 325px;
+	font-size: 14px;
+}
+.modal-confirm .modal-content {
+	padding: 20px;
+	border-radius: 5px;
+	border: none;
+}
+.modal-confirm .modal-header {
+	border-bottom: none;   
+	position: relative;
+}
+.modal-confirm h4 {
+	text-align: center;
+	font-size: 26px;
+	margin: 30px 0 -15px;
+}
+.modal-confirm .form-control, .modal-confirm .btn {
+	min-height: 40px;
+	border-radius: 3px; 
+}
+.modal-confirm .close {
+	position: absolute;
+	top: -5px;
+	right: -5px;
+}	
+.modal-confirm .modal-footer {
+	border: none;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 13px;
+}	
+.modal-confirm .icon-box {
+	color: #fff;		
+	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top: -70px;
+	width: 95px;
+	height: 95px;
+	border-radius: 50%;
+	z-index: 9;
+	background: #ff0101;
+	padding: 15px;
+	text-align: center;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.modal-confirm .icon-box i {
+	font-size: 58px;
+	position: relative;
+	top: 3px;
+}
+.modal-confirm.modal-dialog {
+	margin-top: 80px;
+}
+.modal-confirm .btn {
+	color: #fff;
+	border-radius: 4px;
+	background: #82ce34;
+	text-decoration: none;
+	transition: all 0.4s;
+	line-height: normal;
+	border: none;
+}
+.modal-confirm .btn:hover, .modal-confirm .btn:focus {
+	background: #6fb32b;
+	outline: none;
+}
+.trigger-btn {
+	display: inline-block;
+	margin: 100px auto;
+}
+
+.centered-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+.modal-confirm .icon-box-exit {
+	color: #fff;		
+	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top: -70px;
+	width: 95px;
+	height: 95px;
+	border-radius: 50%;
+	z-index: 9;
+	background: #0cff04;
+	padding: 15px;
+	text-align: center;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.modal-confirm .icon-box-exit i {
+	font-size: 58px;
+	position: relative;
+	top: 3px;
+}
+
+.icon-saldo{
+    font-size: 48px;
+    color: hsla(0, 0%, 0%, 0.973);
+    left: 10px;
+    margin-left: 13px;
+}
+
+.content_saldo{
+    color: #636363;
+}
+
+.loader-section{
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    z-index:999;
+    transition: all 1s 1s ease-out;
+    opacity:1;
+  }
+  .loaded{
+    opacity:0;
+    z-index:-1;
+  }
+  
+  .loader {
+      width: 48px;
+      height: 48px;
+      border: 5px solid #623ddb;
+      border-bottom-color: transparent;
+      border-radius: 50%;
+      display: inline-block;
+      box-sizing: border-box;
+      animation: rotation 1s linear infinite;
+  }
+  @keyframes rotation {
+      0% {
+          transform: rotate(0deg);
+      }
+      100% {
+          transform: rotate(360deg);
+      }
+  }

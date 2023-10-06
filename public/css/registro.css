@@ -1,0 +1,21 @@
+.background-image {
+    /* Establece la imagen de fondo y ajusta las propiedades según tus necesidades */
+    background-image: url('../img/banco.jpg');
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    background-position: center center; /* Alinea la imagen al centro del contenedor */
+    height: 540px; /* Ajusta la altura según tus necesidades */
+    position: relative; /* Necesario para posicionar la tarjeta encima de la imagen */
+  }
+  
+  .card {
+    /* Establece el estilo de la tarjeta */
+    width: 85%; /* Ajusta el ancho de la tarjeta según tus necesidades */
+    margin: 0 auto; /* Centra la tarjeta horizontalmente en el contenedor */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para la tarjeta */
+    position: absolute; /* Permite posicionar la tarjeta encima de la imagen de fondo */
+    top: 50%; /* Alinea la parte superior de la tarjeta al centro vertical del contenedor */
+    left: 50%; /* Alinea la parte izquierda de la tarjeta al centro horizontal del contenedor */
+    transform: translate(-50%, -50%); /* Centra la tarjeta completamente en el centro */
+    padding: 20px; /* Espaciado interno de la tarjeta */
+  }
+  
