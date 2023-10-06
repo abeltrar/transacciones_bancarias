@@ -34,3 +34,5 @@ Route::post('/verCuenta', [App\Http\Controllers\transaccionesController::class, 
 Route::post('/pagarCuenta', [App\Http\Controllers\transaccionesController::class, 'pagarCuenta'])->name('pagarCuenta');
 Route::post('/enviartoken', [App\Http\Controllers\transaccionesController::class, 'enviartoken'])->name('enviartoken');
 Route::post('/enviarpago', [App\Http\Controllers\transaccionesController::class, 'enviarpago'])->name('enviarpago');
+Route::get('/createCuentaVer', [App\Http\Controllers\transaccionesController::class, 'createCuentaVer'])->name('createCuentaVer');
+Route::post('/createCuenta', [App\Http\Controllers\transaccionesController::class, 'createCuenta'])->name('createCuenta');

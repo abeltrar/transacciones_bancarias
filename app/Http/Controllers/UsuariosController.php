@@ -46,6 +46,7 @@ class UsuariosController extends Controller
        $User->email = $request->input("email");
        $User->password = md5($request->input("password"));
        $User->id_cargo = $request->input("id_cargo");
+       $User->cedula = $request->input("cedula");
        $User->save();
 
         
@@ -78,6 +79,7 @@ class UsuariosController extends Controller
         $usuario->name = $request->input('name');
         $usuario->email = $request->input('email');
         $usuario->id_cargo = $request->input('id_cargo');
+        $usuario->cedula = $request->input('cedula');
         
         // Verifica si se proporcionó una nueva contraseña antes de encriptarla
         if ($request->has('password')) {

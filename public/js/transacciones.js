@@ -1,7 +1,3 @@
-$(document).ready(function () {
-    
-});
-
 
 function pageLoaded() {
     let loaderSection = document.querySelector('.loader-section');
@@ -284,11 +280,6 @@ function send_recarga(){
     $.ajax({
         method: 'POST',
         url: '/recargarCuenta',
-        headers: {
-
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-
-        },
         data: {
             documento: documento,
             celular: celular,
@@ -317,7 +308,11 @@ function send_recarga(){
         }
     });
 
-
+   
 
 }
+
+
+
+
 

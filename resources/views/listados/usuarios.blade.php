@@ -144,7 +144,7 @@
                                               <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
 
                                               <div class="col-md-6">
-                                                  <input id="name" type="text" class="form-control" name="name">
+                                                  <input id="name" type="text" class="form-control" name="name"  placeholder="Ingrese nombre">
 
                               
                                               </div>
@@ -154,7 +154,7 @@
                                               <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 
                                               <div class="col-md-6">
-                                                  <input id="email" type="email" class="form-control" name="email" >
+                                                  <input id="email" type="email" class="form-control" name="email" placeholder="Ingrese Email" >
 
                                                   @error('email')
                                                       <span class="invalid-feedback" role="alert">
@@ -168,7 +168,7 @@
                                               <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
 
                                               <div class="col-md-6">
-                                                  <input id="password" type="password" pattern=".{6,}" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                                  <input id="password" type="password" pattern=".{6,}" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password"  placeholder="Ingrese contraseña">
 
                                                   @error('password')
                                                       <span class="invalid-feedback" role="alert">
@@ -191,6 +191,16 @@
                                               </div>
                                             </div>
 
+                                          </div>
+
+                                          <div class="row mb-3">
+                                              <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Cédula') }}</label>
+
+                                              <div class="col-md-6">
+                                                  <input id="cedula" type="number" class="form-control" name="cedula"  placeholder="Ingrese cédula">
+
+                              
+                                              </div>
                                           </div>
 
                                           <div class="row mb-0">
@@ -253,8 +263,8 @@
                       <!-- /.col -->
                       <div class="col-sm-4 border-right">
                         <div class="description-block">
-                          <h5 class="description-header">Fecha de creación</h5>
-                          <span class="description-text" id="creacionUser"></span>
+                          <h5 class="description-header">Cédula</h5>
+                          <span class="description-text" id="cedula_ver"></span>
                         </div>
                         <!-- /.description-block -->
                       </div>
@@ -407,6 +417,13 @@
                                               <strong>{{ $message }}</strong>
                                               </span>
                                               @enderror
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label for="cedula_edit" class="col-md-4 col-form-label text-md-end">{{ __('Cedula') }}</label>
+                                            <div class="col-md-6">
+                                              <input id="cedula_edit" type="number" class="form-control" name="cedula" value="">
                                             </div>
                                         </div>
                                         <div class="row mb-0">

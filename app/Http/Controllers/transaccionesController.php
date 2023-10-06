@@ -184,5 +184,44 @@ class transaccionesController extends Controller
     }
 
 
+    
+    public function createCuentaVer()
+    {
+        return view('transacciones.cuentas');
+    }
+
+    public function createCuenta(Request $request){
+
+
+        $cedula = $request->input('cedula');
+        $celular = $request->input('celular');
+        $email = $request->input('email');
+
+        // Verifica si el usuario con la cédula existe
+        $usuario = User::where('cedula', $cedula)->first();
+    
+        if ($usuario) {
+            // Crea una nueva cuenta relacionada con el usuario
+            $cuenta = new Cuenta();
+            $cuenta->id_usuario = $usuario->id; // Asigna el id del usuario
+            $cuenta->cedula = $cedula; // Asigna el id del usuario
+            $cuenta->celular = $celular;
+            $cuenta->email = $email; // Asigna el email del usuario
+            $cuenta->saldo = 0; // Puedes establecer un saldo inicial si es necesario
+            $cuenta_exist = Cuenta::where('cedula', $cedula)->first();
+            if(!$cuenta_exist){
+                $cuenta->save();
+                return response()->json(['status' => '1','message' => 'Cuenta creada exitosamente']);
+            }else{
+                return response()->json(['status' => '0','message' => 'El usuario ya tiene una cuenta creada']);
+            }
+            
+
+        } else {
+            return response()->json(['status' => '0','message' => 'No se encontró un usuario con la cédula proporcionada']);
+        }
+    }
+
+
 
 }

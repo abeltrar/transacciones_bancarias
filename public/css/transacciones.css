@@ -233,3 +233,26 @@
           transform: rotate(360deg);
       }
   }
+
+
+  .btn_cuenta{
+        background: radial-gradient(circle, #0074d9, #00AABB);
+        color: aliceblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 39%;
+
+  }
+
+
+    .card_creacion_head{
+       
+        width: 56%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20%;
+
+    }

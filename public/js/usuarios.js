@@ -67,16 +67,18 @@ function ver_usuario(verUsuarioUrl,idUsuario,mode){
                     // Procesar los datos del usuario
                     var user = data.user;
                     if(mode=='ver'){
+
+
                         $('#modal_ver_usuario').modal('show');
                         // Actualizar la modal con la información del usuario
                         $("#name_user").text(user.name);
                         $('#userAvatar').attr('src', user.foto);
                         $("#emailUser").text(user.email);
-                        $("#creacionUser").text(user.created_at);
+                        $("#cedula_ver").text(user.cedula);
                         $("#rol_usuario").text(user.nombre_cargo);
                     }else{
 
-                        console.log(user);
+    
                         
                         $("#name_user_edit").text(user.name);
                         $('#userAvatarEdit').attr('src', user.foto);
@@ -85,6 +87,7 @@ function ver_usuario(verUsuarioUrl,idUsuario,mode){
                         $('#idusuario_edit').val(user.id);
                         $('#password_edit').val(user.password);
                         $('#id_cargo_edit').val(user.id_cargo);
+                        $("#cedula_edit").val(user.cedula);
                         $('#modal_edit_usuario').modal('show');
                     }
                     
